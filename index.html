@@ -10,7 +10,10 @@
     <h1>Printing Page</h1>
     <button onclick="handleClose()">Close</button>
     <script>
-           window.location.href="app://zprint?key=%20printed%20successfully";
+        const urlParams = new URLSearchParams(window.location.search);
+        const key = urlParams.get('key');
+
+           window.location.href="app://zprint?key="+key;
         const handleClose=()=>{
             window.open('','_self').close();
         }
