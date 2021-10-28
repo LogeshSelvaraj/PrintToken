@@ -4,33 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Print</title>
 </head>
 <body>
-    <h1>Printing Page</h1>
-    <button id="print" onclick="handlePrint()">Print</button>
-    <button onclick="handleClose()">Close</button>
+    <h1>Hello Canteen</h1>
+    <h1>Printed Successfully</h1>
     <script>
-        const urlParams = new URLSearchParams(window.location.search);
-        const key = urlParams.get('key');
-
-            const handlePrint=()=>{
-                console.log("Print Clicked")
-                window.location.href="app://zprint?key="+key;
-            }
-
-            setTimeout(function(){
-                document.getElementById("print").click();
-            }, 1000);
-          
-        const handleClose=()=>{
-            window.open('','_self').close();
-        }
-
+        window.print();
         setTimeout(function(){
             window.open('','_self').close();
-            }, 10000);
-
+            }, 5000);
     </script>
 </body>
 </html>
