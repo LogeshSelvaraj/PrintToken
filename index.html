@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>Printing Page</h1>
-    <button onload="print()" > Print</button>
+    <button onclick="print()" > Print</button>
     <button onclick="handleClose()">Close</button>
     <script>
         const urlParams = new URLSearchParams(window.location.search);
@@ -19,7 +19,7 @@
         }
 
         const print=()=>{
-            //window.location.replace("app://zprint?key=%20printed%20successfully");
+            window.location.replace("app://zprint?key=%20printed%20successfully");
         }
 
         setTimeout(function(){
