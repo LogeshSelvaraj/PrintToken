@@ -8,23 +8,18 @@
 </head>
 <body>
     <h1>Printing Page</h1>
-    <button onclick="print()" > Print</button>
-    <button onclick="handleClose()">Close</button>
     <script>
         const urlParams = new URLSearchParams(window.location.search);
         const key = urlParams.get('key');
 
         window.onload=()=>{
-            window.location.replace("app://zprint?key=%20printed%20successfully");
+            window.location.replace("app://zprint?key="+key);
         }
 
-        const print=()=>{
-            window.location.replace("app://zprint?key=%20printed%20successfully");
-        }
-
+      
         setTimeout(function(){
             window.open('','_self').close();
-            }, 10000);
+            }, 1000);
 
     </script>
 </body>
