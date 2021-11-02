@@ -16,6 +16,7 @@ const loadOrder=()=>{
     }
 }
 
+loadOrder();
 
 
 
@@ -35,4 +36,4 @@ const loadOrder=()=>{
     window.open('','_self').close();
 }
 
-loadOrder();
+
