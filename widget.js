@@ -34,7 +34,7 @@ const prepareOrderKey=()=>{
     }
     key=key+orderItems[i]+space+"-"+orderJson[orderItems[i]]+"%0A";
   }
-  return "Employee Id : "+urlParams.get("empId")+"%0A"+key;
+  return "Employee Id : "+urlParams.get("empId")+"%0A"+key+"%0A%20%20----------------";
 }
 
 
@@ -46,9 +46,9 @@ const prepareOrderKey=()=>{
     console.log(printString);
       window.location.href="app://zprint?key="+printString;
 
-      // setTimeout(function(){
-      //   window.open('','_self').close();
-      //   }, 1000);
+      setTimeout(function(){
+        window.open('','_self').close();
+        }, 5000);
 
   }
   
