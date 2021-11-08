@@ -1,8 +1,6 @@
 
 
 
-
-
 const loadOrder=()=>{
     const urlParams = new URLSearchParams(window.location.search);
     const orderString = urlParams.get('orderData');
@@ -23,13 +21,13 @@ loadOrder();
 
 
 const prepareOrderKey=()=>{
-  const key="";
+  let key="";
   const urlParams = new URLSearchParams(window.location.search);
     const orderData = urlParams.get('orderData');
     const orderItems=Object.keys(orderData);
     for(let i=0;i<orderItems.length;i++){
      const lineLength=20-orderItems[i].length;
-     const space="";
+     let space="";
     for(let j=0;j<lineLength;j++){
       space=space+"%20";
     }
