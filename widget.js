@@ -23,17 +23,18 @@ loadOrder();
 const prepareOrderKey=()=>{
   let key="";
   const urlParams = new URLSearchParams(window.location.search);
-    const orderData = urlParams.get('orderData');
-    const orderItems=Object.keys(orderData);
+  const orderString = urlParams.get('orderData');
+  orderJson=JSON.parse(orderString);
+  orderItems=Object.keys(orderJson);
     for(let i=0;i<orderItems.length;i++){
      const lineLength=20-orderItems[i].length;
      let space="";
     for(let j=0;j<lineLength;j++){
       space=space+"%20";
     }
-    key=key+orderItems[i]+"-"+orderData[orderItems[i]]+"%0A";
+    key=key+orderItems[i]+space+"-"+orderJson[orderItems[i]]+"%0A";
   }
-  return "Employee Id : "+urlParams["empId"]+"%0A"+key;
+  return "Employee Id : "+urlParams.get("empId")+"%0A"+key;
 }
 
 
@@ -55,5 +56,4 @@ const prepareOrderKey=()=>{
   const handleClose=()=>{
     window.open('','_self').close();
 }
-
 
