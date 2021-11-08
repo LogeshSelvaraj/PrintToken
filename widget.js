@@ -9,7 +9,7 @@ const loadOrder=()=>{
     
     orderHtml="";
     for(let i=0;i<orderNames.length;i++){
-        orderHtml=orderHtml+"<li class='list-group-item'>"+orderNames[i]+" - "+orderJson[orderNames[i]]+"</li>"
+        orderHtml=orderHtml+"<li class='list-group-item'><div class='item-container'><div class='name'>"+orderNames[i]+"</div><div class='count'>"+orderJson[orderNames[i]]+"</div></div></li>"
     }
     if(orderHtml){
         document.getElementById("order").innerHTML=orderHtml;
@@ -17,6 +17,7 @@ const loadOrder=()=>{
 }
 
 loadOrder();
+
 
 
 
@@ -35,5 +36,4 @@ loadOrder();
   const handleClose=()=>{
     window.open('','_self').close();
 }
-
 
