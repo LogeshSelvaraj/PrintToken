@@ -14,33 +14,62 @@
 
     <style>
         #button-div {
-            padding-top: 100px;
+            margin-top: 50px;
             justify-content: center;
             width: fit-content;
         }
         
-        .item {
-            text-align: center;
-            padding: 10px;
-            margin: 15px;
-            border-radius: 10px;
-            box-shadow: 0 0 40px -10px rgba(0, 0, 0, .4);
+        .page {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+        
+        .content {
+            flex: 1;
+            width: 45%;
+            margin: auto;
         }
         
         #order-div {
             margin: auto;
+        }
+        
+        .item-container {
+            display: flex;
+            flex-direction: row;
+        }
+        
+        .name {
+            flex: 1;
+        }
+        
+        .count {
+            flex: 0.5;
+            text-align: right;
+        }
+        
+        .heading {
+            padding: 25px 0 40px 0;
+            text-align: center;
+        }
+        
+        .btn {
+            margin: 0 15px;
         }
     </style>
 
 </head>
 
 <body>
-    <div class="d-flex justify-content-center flex-column">
-        <div class="p-2">Your Order</div>
-        <div id="order-div" class="p-2">
+    <div class="page">
+        <div class="content heading">
+            <h2>Your Order</h2>
+        </div>
+        <div id="order-div" class="content">
             <ul class="list-group" id="order"></ul>
         </div>
-        <div id="button-div" class="p-2">
+        <div id="button-div" class="content">
             <button onclick="handleClose()" class="btn btn-secondary btn-large">Close</button> <button class="btn btn-success btn-large" onclick="handlePrint()">Print</button>
         </div>
     </div>
