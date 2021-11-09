@@ -34,7 +34,7 @@ const prepareOrderKey=()=>{
     }
     key=key+orderItems[i]+space+"-"+orderJson[orderItems[i]]+"%0A";
   }
-  return "Employee Id : "+urlParams.get("empId")+"%0A"+key+"%0A%20%20----------------";
+  return "Employee Id : "+urlParams.get("empId")+"%0A%0A"+key+"%0A%20%20----------------";
 }
 
 
@@ -48,7 +48,7 @@ const prepareOrderKey=()=>{
 
       setTimeout(function(){
         window.open('','_self').close();
-        }, 5000);
+        }, 1000);
 
   }
   
