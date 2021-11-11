@@ -21,7 +21,7 @@ loadOrder();
 
 
 const prepareOrderKey=()=>{
-    let key="";
+   let key="";
   const urlParams = new URLSearchParams(window.location.search);
   let otherData = urlParams.get("otherData");
   otherData =JSON.parse(otherData);
@@ -36,7 +36,7 @@ const prepareOrderKey=()=>{
     }
     key=key+orderItems[i]+space+"-"+orderJson[orderItems[i]]+"%0A";
   }
-  return "Employee Id : "+urlParams.get("empId")+"%0ASession     : "+otherData["Session"]+"%0ALocation    : "+otherData["Location"]+"%0A%0A"+key;
+  return "Date        : "+new Date().toLocaleDateString()+ "%0ASession     : "+otherData["Session"]+"%0ALocation    : "+otherData["Location"]+ "%0AEmployee Id : "+urlParams.get("empId")+"%0A%0A"+key;
 }
 
 
